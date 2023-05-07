@@ -1,19 +1,24 @@
-import React from 'react'
-import CIcon from '@coreui/icons-react'
+import React from 'react';
+import CIcon from '@coreui/icons-react';
 import {
   cilBell,
+  cilBrush,
   cilCalculator,
   cilChartPie,
   cilCursor,
+  cilDataTransferDown,
   cilDescription,
   cilDrop,
+  cilEducation,
   cilNotes,
   cilPencil,
   cilPuzzle,
+  cilResizeWidth,
   cilSpeedometer,
   cilStar,
-} from '@coreui/icons'
-import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
+  cilTranslate,
+} from '@coreui/icons';
+import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react';
 
 const _nav = [
   {
@@ -25,6 +30,22 @@ const _nav = [
       color: 'info',
       text: 'NEW',
     },
+  },
+  {
+    component: CNavTitle,
+    name: 'Background Edit',
+  },
+  {
+    component: CNavItem,
+    name: 'Background Remove',
+    to: '/bgEdit/bgRemove',
+    icon: <CIcon icon={cilBrush} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Background Transparent ',
+    to: '/bgEdit/bgTransparent ',
+    icon: <CIcon icon={cilEducation} customClassName="nav-icon" />,
   },
   {
     component: CNavTitle,
@@ -300,6 +321,6 @@ const _nav = [
     href: 'https://coreui.io/react/docs/templates/installation/',
     icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
   },
-]
+];
 
-export default _nav
+export default _nav;
